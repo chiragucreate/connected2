@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results total="6" passed="6" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2019-05-21T12:42:43Z" name="Default suite" finished-at="2019-05-21T12:43:00Z" duration-ms="17114">
+    <groups>
+    </groups>
+    <test started-at="2019-05-21T12:42:43Z" name="Default test" finished-at="2019-05-21T12:43:00Z" duration-ms="17114">
+      <class name="Maven.Login">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:Maven.Login@436a4e4b]" started-at="2019-05-21T18:12:43Z" name="beforeMethod" finished-at="2019-05-21T18:12:54Z" duration-ms="10840" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="testwithvalidpassword()[pri:0, instance:Maven.Login@436a4e4b]" started-at="2019-05-21T18:12:54Z" name="testwithvalidpassword" finished-at="2019-05-21T18:12:54Z" duration-ms="152" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testwithvalidpassword -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:Maven.Login@436a4e4b]" started-at="2019-05-21T18:12:54Z" name="afterMethod" finished-at="2019-05-21T18:12:54Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method signature="testwithvalidemail()[pri:0, instance:Maven.Login@436a4e4b]" started-at="2019-05-21T18:12:54Z" name="testwithvalidemail" finished-at="2019-05-21T18:12:54Z" duration-ms="191" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testwithvalidemail -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:Maven.Login@436a4e4b]" started-at="2019-05-21T18:12:54Z" name="afterMethod" finished-at="2019-05-21T18:12:54Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method signature="testwithinvaliddetails()[pri:0, instance:Maven.Login@436a4e4b]" started-at="2019-05-21T18:12:54Z" name="testwithinvaliddetails" finished-at="2019-05-21T18:12:56Z" duration-ms="1644" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testwithinvaliddetails -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:Maven.Login@436a4e4b]" started-at="2019-05-21T18:12:56Z" name="afterMethod" finished-at="2019-05-21T18:12:56Z" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method signature="testwithinvalidemail()[pri:0, instance:Maven.Login@436a4e4b]" started-at="2019-05-21T18:12:56Z" name="testwithinvalidemail" finished-at="2019-05-21T18:12:56Z" duration-ms="511" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testwithinvalidemail -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:Maven.Login@436a4e4b]" started-at="2019-05-21T18:12:56Z" name="afterMethod" finished-at="2019-05-21T18:12:56Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method signature="testwithinvalidpassword()[pri:0, instance:Maven.Login@436a4e4b]" started-at="2019-05-21T18:12:56Z" name="testwithinvalidpassword" finished-at="2019-05-21T18:12:57Z" duration-ms="552" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testwithinvalidpassword -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:Maven.Login@436a4e4b]" started-at="2019-05-21T18:12:57Z" name="afterMethod" finished-at="2019-05-21T18:12:57Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method signature="testwithvaliddetails()[pri:0, instance:Maven.Login@436a4e4b]" started-at="2019-05-21T18:12:57Z" name="testwithvaliddetails" finished-at="2019-05-21T18:13:00Z" duration-ms="3203" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testwithvaliddetails -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:Maven.Login@436a4e4b]" started-at="2019-05-21T18:13:00Z" name="afterMethod" finished-at="2019-05-21T18:13:00Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- Maven.Login -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

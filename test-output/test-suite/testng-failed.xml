@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [test-suite]">
+  <test name="tests(failed)">
+    <classes>
+      <class name="Maven.Createjob">
+        <methods>
+          <include name="nextbuttondisableandbackbuttonenable"/>
+          <include name="nextbuttondisable"/>
+          <include name="nextbuttonenable"/>
+          <include name="beforeMethod"/>
+          <include name="main"/>
+          <include name="nextbuttondisableasndbackbuttonenable"/>
+        </methods>
+      </class> <!-- Maven.Createjob -->
+      <class name="Maven.HCcreate">
+        <methods>
+          <include name="hcwithexistingemail"/>
+          <include name="hcwithinvalidurl"/>
+          <include name="hcwithvaliddetails"/>
+          <include name="hcwithblankdetails"/>
+          <include name="hcwithinvalidemail"/>
+          <include name="hcwithinvalidpostcode"/>
+        </methods>
+      </class> <!-- Maven.HCcreate -->
+      <class name="Maven.Driverinvite">
+        <methods>
+          <include name="beforeMethod"/>
+          <include name="drivervalidemail3"/>
+          <include name="createjobwithvaliddetails"/>
+          <include name="drivervalidiemail"/>
+          <include name="drivervalidemail"/>
+          <include name="drivervalidemail1"/>
+        </methods>
+      </class> <!-- Maven.Driverinvite -->
+      <class name="Maven.Forgotpassword">
+        <methods>
+          <include name="testwithdifferentpassword"/>
+          <include name="testwithblankemail"/>
+          <include name="testwithvalidemail"/>
+          <include name="testredirectforgot"/>
+          <include name="testwithblankpassword"/>
+          <include name="testwithunmatchedformatpassword"/>
+          <include name="testwithinvalidemail"/>
+          <include name="testwithvalidpassword"/>
+        </methods>
+      </class> <!-- Maven.Forgotpassword -->
+      <class name="Maven.Rateupdate">
+        <methods>
+          <include name="blank11LTDrate"/>
+          <include name="blankLTDrate"/>
+          <include name="blank1LTDrate"/>
+        </methods>
+      </class> <!-- Maven.Rateupdate -->
+      <class name="Maven.Dashboard">
+        <methods>
+          <include name="profilelinkicon"/>
+          <include name="NotYetAllocatedCount"/>
+          <include name="Profilelinktext"/>
+          <include name="Settingstext"/>
+          <include name="Jobstoreview"/>
+          <include name="NOtificationicon"/>
+          <include name="RunningLateCount"/>
+          <include name="OnTimeCount"/>
+          <include name="beforeMethod"/>
+          <include name="jobaschedulelink"/>
+          <include name="Profilelinkname"/>
+          <include name="WaitingToStartCount"/>
+          <include name="jobstoreviewlink"/>
+          <include name="Drivermanagementlink"/>
+        </methods>
+      </class> <!-- Maven.Dashboard -->
+      <class name="Maven.Login">
+        <methods>
+          <include name="testwithinvalidemail"/>
+          <include name="testwithinvaliddetails"/>
+          <include name="testwithvalidpassword"/>
+          <include name="testwithinvalidpassword"/>
+          <include name="testwithvaliddetails"/>
+          <include name="testwithvalidemail"/>
+        </methods>
+      </class> <!-- Maven.Login -->
+      <class name="Maven.JobToScheduleFilter">
+        <methods>
+          <include name="expiredfilter"/>
+          <include name="Applications"/>
+          <include name="WaitingToStart"/>
+          <include name="Unallocatedjobs"/>
+        </methods>
+      </class> <!-- Maven.JobToScheduleFilter -->
+    </classes>
+  </test> <!-- tests(failed) -->
+</suite> <!-- Failed suite [test-suite] -->
