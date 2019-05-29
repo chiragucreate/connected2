@@ -11,13 +11,21 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 public class JobToScheduleFilter {
 	WebDriver driver;
 	
-
+	public String getStatus(String text) {
+		return text == "Applications" || text == "Job Posted" ? text : "";}
+			//		if(text == "Applications" || text == "Job Posted" ) {
+//			return text;
+//		}else{
+//			return text;
+//		}
+//	}
 	
 	@Test(priority=1,description="Verify unallocated filter working or not")
     public void Unallocatedjobs() throws InterruptedException {
@@ -429,10 +437,11 @@ System.out.println("if running");
 					}}}}
 
 
+
 @BeforeTest
 public void beforeMethod() throws InterruptedException {
 // Launch the Online Store Website
-String exePath = "C:\\Users\\ucreate-65\\Downloads\\chromedriver_win32\\chromedriver.exe";
+String exePath = "C:\\Users\\ucreate-65\\Downloads\\chromedriver_win32 (2)\\chromedriver.exe";
 System.setProperty("webdriver.chrome.driver", exePath);
 
 driver = new ChromeDriver();
@@ -447,4 +456,13 @@ driver.findElement(By.xpath("//input[@name='email']")).sendKeys("connected@yopma
   Thread.sleep(3000);
   
 }
+@AfterTest
+	 
+ public void afterMethod() {
+
+  // Close the driver
+
+     driver.quit();
+
+ }
 }

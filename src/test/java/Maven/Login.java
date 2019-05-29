@@ -1,9 +1,4 @@
 package Maven;
-
-
-
-
-
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -14,11 +9,13 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 
-	public class Login{
+	public class Login
+	{
 		WebDriver driver;
 	
 		
@@ -32,7 +29,7 @@ import org.testng.annotations.Test;
 		 
 		 // Find the element that's ID attribute is 'account'(My Account)
 		 
-		      driver.findElement(By.xpath("//input[@name='email']")).sendKeys("connected@yopmail.com");
+		      driver.findElement(By.xpath("//input[@name='mail']")).sendKeys("connected@yopmail.com");
 		 
 		     
 		 
@@ -247,13 +244,13 @@ import org.testng.annotations.Test;
 
 	}
 
-	    @AfterMethod
+	    @AfterTest
 
 	    public void afterMethod() {
 
 		// Close the driver
 
-		//driver.quit();
+		driver.quit();
 
 	}
 

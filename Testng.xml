@@ -1,19 +1,22 @@
-<suite name="test-suite">
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="test-suite" parallel="tests" thread-count="5">
 
+    <listeners>
+       <listener class-name="com.qa.Extentreportlistener.Extentreportlistener">
+       </listener>
+       </listeners>  
 <test name= "tests">
-
-         
-  
-	 <classes>
-	   <class name="Maven.Login"/>
-	   <class name="Maven.Forgotpassword"/>
-	    <class name="Maven.HCcreate"/>
-	    <class name="Maven.Driverinvite"/>
-	    <class name="Maven.Createjob"/>
-	    <class name="Maven.Rateupdate"/>
-	    <class name="Maven.Dashboard"/>
-	    <class name="Maven.JobToScheduleFilter"/>
-	    
-     </classes>
-   </test>
-</suite>
+    <classes>
+     
+      <class name="Maven.Login"/>
+       <class name="Maven.Forgotpassword"/>
+      <class name="Maven.Createjob"/>
+      <class name="Maven.JobToScheduleFilter"/>
+      <class name="Maven.Rateupdate"/>
+      <class name="Maven.HCcreate"/>
+      <class name="Maven.Dashboard"/>
+      <class name="Maven.Driverinvite"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

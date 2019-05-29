@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="Maven.HCcreate">
+        <methods>
+          <include name="hcwithblankdetails"/>
+          <include name="afterMethod"/>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- Maven.HCcreate -->
+      <class name="Maven.Forgotpassword">
+        <methods>
+          <include name="beforeMethod"/>
+          <include name="testwithdifferentpassword"/>
+          <include name="testwithblankemail"/>
+          <include name="testwithvalidemail"/>
+          <include name="testredirectforgot"/>
+          <include name="testwithblankpassword"/>
+          <include name="testwithunmatchedformatpassword"/>
+          <include name="afterMethod"/>
+          <include name="testwithinvalidemail"/>
+          <include name="testwithvalidpassword"/>
+        </methods>
+      </class> <!-- Maven.Forgotpassword -->
+      <class name="Maven.Driverinvite">
+        <methods>
+          <include name="beforeMethod"/>
+          <include name="AfterMethod"/>
+          <include name="createjobwithvaliddetails"/>
+          <include name="drivervalidemail1"/>
+        </methods>
+      </class> <!-- Maven.Driverinvite -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

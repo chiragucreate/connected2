@@ -1,13 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]">
-  <test name="Default test(failed)">
+<suite parallel="tests" name="Failed suite [test-suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="com.qa.Extentreportlistener.Extentreportlistener"/>
+  </listeners>
+  <test thread-count="5" parallel="tests" name="tests(failed)">
     <classes>
-      <class name="extentreport.Extentreport">
+      <class name="Maven.JobToScheduleFilter">
         <methods>
-          <include name="logintest"/>
+          <include name="beforeMethod"/>
+          <include name="afterMethod"/>
+          <include name="Applications"/>
         </methods>
-      </class> <!-- extentreport.Extentreport -->
+      </class> <!-- Maven.JobToScheduleFilter -->
+      <class name="Maven.Driverinvite">
+        <methods>
+          <include name="beforeMethod"/>
+          <include name="afterMethod"/>
+          <include name="drivervalidiemail"/>
+          <include name="drivervalidemail"/>
+        </methods>
+      </class> <!-- Maven.Driverinvite -->
+      <class name="Maven.HCcreate">
+        <methods>
+          <include name="hcwithexistingemail"/>
+          <include name="hcwithinvalidurl"/>
+          <include name="hcwithvaliddetails"/>
+          <include name="hcwithblankdetails"/>
+          <include name="afterMethod"/>
+          <include name="beforeMethod"/>
+          <include name="hcwithinvalidemail"/>
+          <include name="hcwithinvalidpostcode"/>
+        </methods>
+      </class> <!-- Maven.HCcreate -->
+      <class name="Maven.Createjob">
+        <methods>
+          <include name="nextbuttondisableandbackbuttonenable"/>
+          <include name="nextbuttondisable"/>
+          <include name="afterMethod"/>
+          <include name="nextbuttonenable"/>
+          <include name="beforeMethod"/>
+          <include name="main"/>
+          <include name="nextbuttondisableasndbackbuttonenable"/>
+        </methods>
+      </class> <!-- Maven.Createjob -->
+      <class name="Maven.Login">
+        <methods>
+          <include name="afterMethod"/>
+          <include name="beforeMethod"/>
+          <include name="testwithvaliddetails"/>
+        </methods>
+      </class> <!-- Maven.Login -->
+      <class name="Maven.Rateupdate">
+        <methods>
+          <include name="blank11LTDrate"/>
+          <include name="blankLTDrate"/>
+          <include name="blank1LTDrate"/>
+          <include name="beforeMethod"/>
+          <include name="afterMethod"/>
+        </methods>
+      </class> <!-- Maven.Rateupdate -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- tests(failed) -->
+</suite> <!-- Failed suite [test-suite] -->

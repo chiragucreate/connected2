@@ -10,6 +10,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -162,7 +163,7 @@ Thread.sleep(2000);
 				
 				//WebElement size1=driver.findElement(By.xpath("//*[@id=\"app\"]/div/div/section/div[2]/div/section/div[3]/div[5]/ul/li[7]/a"));
 				//int size2=Integer.parseInt(size1.getText());
-				if(size>0 && size2<=Integer.parseInt(driver.findElement(By.xpath("//a[text()='"+size+"']")).getText()))
+				if(size>0 && size2<=Integer.parseInt(driver.findElement(By.xpath("//a[text()='"+size2+"']")).getText()))
 				{ 
 				System.out.println("pagination exists");
 				// click on pagination link
@@ -567,7 +568,7 @@ System.out.println("last element"+size4);
 	@BeforeTest
 	    public void beforeMethod() {
 		// Launch the Online Store Website
-		String exePath = "C:\\Users\\ucreate-65\\Downloads\\chromedriver_win32\\chromedriver.exe";
+		String exePath = "C:\\Users\\ucreate-65\\Downloads\\chromedriver_win32 (2)\\chromedriver.exe";
 		System.setProperty("webdriver.chrome.driver", exePath);
 
 		driver = new ChromeDriver();
@@ -581,5 +582,13 @@ System.out.println("last element"+size4);
 	      driver.findElement(By.xpath("//button[@class='green-primary-btn']")).click();
 
 	}
-
+	@AfterTest
+		 
+	  public void afterMethod() {
+	 
+	   // Close the driver
+	 
+	      driver.quit();
+	 
+	  }
 }

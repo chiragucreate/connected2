@@ -128,8 +128,7 @@ else {
   
 
 
-
-   
+  
 
 
            @BeforeTest
@@ -154,8 +153,12 @@ else {
 
 }
            @AfterTest
-           public void AfterMethod() throws InterruptedException {
-            
-           driver.quit();
-           } 
+    		 
+  		  public void afterMethod() {
+  		 
+  		   // Close the driver
+  		 
+  		      driver.quit();
+  		 
+  		  }
 }
