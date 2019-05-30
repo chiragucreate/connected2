@@ -29,7 +29,7 @@ public class Createjob {
 	
 
 	@Test(priority=1,description="When HC create a job with valid details")
-	public  void main() throws InterruptedException
+	public  void hcwithvaliddetails() throws InterruptedException
 		
 		{
 		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS) ;
@@ -74,8 +74,8 @@ public class Createjob {
 			System.out.println(hrs);
 			
 	//--------------------------------------------------------------------------------------------------
-			Thread.sleep(100);
-				driver.findElement(By.xpath("//div[@aria-label='day-"+day+"']")).click();	
+			Thread.sleep(2000);
+				driver.findElement(By.xpath("//div[@aria-label='day-"+day+"' and @class='react-datepicker__day react-datepicker__day--wed react-datepicker__day--today'] ")).click();	
 				driver.findElement(By.xpath("//input[@placeholder='0']")).click();
 				driver.findElement(By.xpath("//span[text()="+hrs+"]")).click();
 				driver.findElement(By.xpath("//input[@placeholder='00']")).click();
@@ -210,6 +210,15 @@ public class Createjob {
            driver = new ChromeDriver();
            driver.manage().window().maximize();
            driver.get("https://uat-connected-2-webapp.herokuapp.com/hclogin");
+       	 WebDriverWait wait = new WebDriverWait(driver,10);
+      		 wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.xpath("//*[@id=\"hubspot-messages-iframe-container\"]/iframe")));
+      		
+      		 WebElement closeicon;
+      		 closeicon= wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath( "/html/body/div/div[1]/span/div[2]/div/button/span/span")));
+      		 closeicon.click();
+      		
+      		
+      	    driver.switchTo().defaultContent();
            driver.findElement(By.xpath("//input[@name='email']")).sendKeys("connected@yopmail.com");
            driver.findElement(By.xpath("//input[@name='password']")).sendKeys("Test123");
            driver.findElement(By.xpath("//button[@class='green-primary-btn']")).click();
@@ -226,7 +235,7 @@ public class Createjob {
  		 
  		   // Close the driver
  		 
- 		      driver.quit();
+ 		      //driver.quit();
  		 
  		  }
 }

@@ -3,16 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Maven.JobToScheduleFilter">
+      <class name="Maven.Createjob">
         <methods>
-          <include name="expiredfilter"/>
-          <include name="beforeMethod"/>
           <include name="afterMethod"/>
-          <include name="Applications"/>
-          <include name="WaitingToStart"/>
-          <include name="Unallocatedjobs"/>
+          <include name="beforeMethod"/>
+          <include name="hcwithvaliddetails"/>
         </methods>
-      </class> <!-- Maven.JobToScheduleFilter -->
+      </class> <!-- Maven.Createjob -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

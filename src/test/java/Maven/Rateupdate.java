@@ -11,7 +11,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -223,6 +224,15 @@ public class Rateupdate {
            driver = new ChromeDriver();
            driver.manage().window().maximize();
            driver.get("https://uat-connected-2-webapp.herokuapp.com/hclogin");
+      	 WebDriverWait wait = new WebDriverWait(driver,10);
+		 wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.xpath("//*[@id=\"hubspot-messages-iframe-container\"]/iframe")));
+		
+		 WebElement closeicon;
+		 closeicon= wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath( "/html/body/div/div[1]/span/div[2]/div/button/span/span")));
+		 closeicon.click();
+		
+		
+	    driver.switchTo().defaultContent();
            driver.findElement(By.xpath("//input[@name='email']")).sendKeys("newhc@yopmail.com");
            driver.findElement(By.xpath("//input[@name='password']")).sendKeys("Test12345");
            driver.findElement(By.xpath("//button[@class='green-primary-btn']")).click();

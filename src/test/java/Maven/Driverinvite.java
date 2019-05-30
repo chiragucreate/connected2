@@ -140,6 +140,15 @@ else {
            WebDriverWait wait=new WebDriverWait(driver, 20);
            driver.manage().window().maximize();
            driver.get("https://uat-connected-2-webapp.herokuapp.com/hclogin");
+       	
+      		 wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.xpath("//*[@id=\"hubspot-messages-iframe-container\"]/iframe")));
+      		
+      		 WebElement closeicon;
+      		 closeicon= wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath( "/html/body/div/div[1]/span/div[2]/div/button/span/span")));
+      		 closeicon.click();
+      		
+      		
+      	    driver.switchTo().defaultContent();
            driver.findElement(By.xpath("//input[@name='email']")).sendKeys("connected@yopmail.com");
            driver.findElement(By.xpath("//input[@name='password']")).sendKeys("Test123");
            driver.findElement(By.xpath("//button[@class='green-primary-btn']")).click();

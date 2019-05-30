@@ -29,7 +29,7 @@ import org.testng.annotations.Test;
 		 
 		 // Find the element that's ID attribute is 'account'(My Account)
 		 
-		      driver.findElement(By.xpath("//input[@name='mail']")).sendKeys("connected@yopmail.com");
+		      driver.findElement(By.xpath("//input[@name='email']")).sendKeys("connected@yopmail.com");
 		 
 		     
 		 
@@ -45,9 +45,9 @@ import org.testng.annotations.Test;
 		      //Implicit
 		      //driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		      
-		      WebElement Element1 = driver.findElement(By.xpath("//span[contains(text(),'Unallocated jobs')]"));
+		      //WebElement Element1 = driver.findElement(By.xpath("//span[contains(text(),'Unallocated jobs')]"));
 		      
-		      System.out.println(Element1.getText());
+		      System.out.println(element.getText());
 		      String expectedtext="Unallocated jobs";
 		      
 		     // String myurl = driver.getCurrentUrl();
@@ -57,7 +57,7 @@ import org.testng.annotations.Test;
 		      
 		      //Through text
 		      
-		      Assert.assertEquals(Element1.getText(),expectedtext,"testcase passed with valid email and password");
+		      Assert.assertEquals(element.getText(),expectedtext,"testcase passed with valid email and password");
 		      
 		      
 		        System.out.println("Successfully passed!");
@@ -233,7 +233,7 @@ import org.testng.annotations.Test;
 		  
 		  		  		  
 		 @BeforeTest
-	    public void beforeMethod() {
+	    public void beforeMethod() throws InterruptedException {
 		// Launch the Online Store Website
 		String exePath = "C:\\Users\\ucreate-65\\Downloads\\chromedriver_win32\\chromedriver.exe";
 		System.setProperty("webdriver.chrome.driver", exePath);
@@ -241,8 +241,18 @@ import org.testng.annotations.Test;
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("https://uat-connected-2-webapp.herokuapp.com/hclogin");
+		
+		 WebDriverWait wait = new WebDriverWait(driver,10);
+		 wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.xpath("//*[@id=\"hubspot-messages-iframe-container\"]/iframe")));
+		
+		 WebElement closeicon;
+		 closeicon= wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath( "/html/body/div/div[1]/span/div[2]/div/button/span/span")));
+		 closeicon.click();
+		
+		
+	    driver.switchTo().defaultContent();}
 
-	}
+	
 
 	    @AfterTest
 

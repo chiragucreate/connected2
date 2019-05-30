@@ -389,7 +389,7 @@ System.out.println("if running");
 				
 				System.out.println(e.getText());
 				
-				Assert.assertEquals(e.getText(),"Waiting To Start","filter value  e not matched");
+				Assert.assertEquals(e.getText(),"Applications","filter value  e not matched");
 			    
 			
 				WebElement size3=driver.findElement(By.xpath("//*[@id=\"app\"]/div/div/section/div[2]/div/section/div[3]/div[5]/ul/li[7]/a"));
@@ -447,6 +447,15 @@ System.setProperty("webdriver.chrome.driver", exePath);
 driver = new ChromeDriver();
 driver.manage().window().maximize();
 driver.get("https://uat-connected-2-webapp.herokuapp.com/hclogin");
+ WebDriverWait wait = new WebDriverWait(driver,10);
+	 wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.xpath("//*[@id=\"hubspot-messages-iframe-container\"]/iframe")));
+	
+	 WebElement closeicon;
+	 closeicon= wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath( "/html/body/div/div[1]/span/div[2]/div/button/span/span")));
+	 closeicon.click();
+	
+	
+   driver.switchTo().defaultContent();
 driver.findElement(By.xpath("//input[@name='email']")).sendKeys("connected@yopmail.com");
  
  

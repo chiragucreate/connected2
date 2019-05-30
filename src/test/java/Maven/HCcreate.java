@@ -29,10 +29,7 @@ public class HCcreate {
 	  @Test(priority=6,description="When Admin create HC with valid details")
 	  
 	  public void hcwithvaliddetails() throws InterruptedException {
-	  //driver.findElement(By.xpath("//input[@name='email']")).sendKeys("test3@ucreate.it");
-	  //driver.findElement(By.xpath("//input[@name='password']")).sendKeys("FOHPI92pUbttZ8WNRSkCluWdnszmO2");
-	  //driver.findElement(By.xpath("//button[@class='green-primary-btn']")).click();
-	  //driver.findElement(By.xpath("//span[text()='add hc']")).click();
+	  
 		  driver.findElement(By.cssSelector("input#companyName")).clear();
 		  driver.findElement(By.cssSelector("input#email")).clear();
 		  driver.findElement(By.cssSelector("input#companyNumber")).clear();
@@ -50,10 +47,11 @@ public class HCcreate {
 	  driver.findElement(By.cssSelector("input#position")).sendKeys("Test position"); 
 	  Thread.sleep(2000);
 	  driver.findElement(By.cssSelector("button.green-primary-btn-small")).click();
-	  Thread.sleep(2000);
+	  WebDriverWait wait = new WebDriverWait(driver, 10);
+      WebElement Element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='add hc']")));
 	
 	 
-	  WebElement Element =driver.findElement(By.xpath("//span[text()='add hc']")); 
+	  
 	  System.out.println(Element.getText()); 
 	  String expectedtext ="add hc";
 	  
@@ -248,7 +246,20 @@ public void hcwithinvalidurl() throws InterruptedException {
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("https://uat-connected-2-webapp.herokuapp.com/admin");
+	 	 WebDriverWait wait = new WebDriverWait(driver,10);
+			 wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.xpath("//*[@id=\"hubspot-messages-iframe-container\"]/iframe")));
+			
+			 WebElement closeicon;
+			 closeicon= wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath( "/html/body/div/div[1]/span/div[2]/div/button/span/span")));
+			 closeicon.click();
+			
+			
+		    driver.switchTo().defaultContent();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.findElement(By.xpath("//input[@name='email']")).sendKeys("test3@ucreate.it");
+		  driver.findElement(By.xpath("//input[@name='password']")).sendKeys("FOHPI92pUbttZ8WNRSkCluWdnszmO2");
+		  driver.findElement(By.xpath("//button[@class='green-primary-btn']")).click();
+		  driver.findElement(By.xpath("//span[text()='add hc']")).click();
 
 	}
 	
