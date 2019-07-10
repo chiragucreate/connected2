@@ -163,7 +163,7 @@ Thread.sleep(2000);
 				
 				//WebElement size1=driver.findElement(By.xpath("//*[@id=\"app\"]/div/div/section/div[2]/div/section/div[3]/div[5]/ul/li[7]/a"));
 				//int size2=Integer.parseInt(size1.getText());
-				if(size>0 && size2<=Integer.parseInt(driver.findElement(By.xpath("//a[text()='"+size2+"']")).getText()))
+				if(size>0 && size2<=Integer.parseInt(driver.findElement(By.xpath("//a[text()='"+size+"']")).getText()))
 				{ 
 				System.out.println("pagination exists");
 				// click on pagination link

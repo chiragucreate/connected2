@@ -6,104 +6,43 @@
   </listeners>
   <test thread-count="5" parallel="tests" name="tests(failed)">
     <classes>
-      <class name="Maven.JobToScheduleFilter">
-        <methods>
-          <include name="expiredfilter"/>
-          <include name="beforeMethod"/>
-          <include name="afterMethod"/>
-          <include name="Applications"/>
-          <include name="WaitingToStart"/>
-          <include name="Unallocatedjobs"/>
-        </methods>
-      </class> <!-- Maven.JobToScheduleFilter -->
       <class name="Maven.Driverinvite">
         <methods>
           <include name="beforeMethod"/>
-          <include name="drivervalidemail3"/>
           <include name="createjobwithvaliddetails"/>
           <include name="afterMethod"/>
-          <include name="drivervalidiemail"/>
-          <include name="drivervalidemail"/>
-          <include name="drivervalidemail1"/>
         </methods>
       </class> <!-- Maven.Driverinvite -->
       <class name="Maven.HCcreate">
         <methods>
-          <include name="hcwithexistingemail"/>
-          <include name="hcwithinvalidurl"/>
           <include name="hcwithvaliddetails"/>
-          <include name="hcwithblankdetails"/>
           <include name="afterMethod"/>
           <include name="beforeMethod"/>
-          <include name="hcwithinvalidemail"/>
-          <include name="hcwithinvalidpostcode"/>
         </methods>
       </class> <!-- Maven.HCcreate -->
       <class name="Maven.Createjob">
         <methods>
-          <include name="nextbuttondisableandbackbuttonenable"/>
           <include name="nextbuttondisable"/>
           <include name="afterMethod"/>
-          <include name="nextbuttonenable"/>
           <include name="beforeMethod"/>
           <include name="hcwithvaliddetails"/>
-          <include name="nextbuttondisableasndbackbuttonenable"/>
         </methods>
       </class> <!-- Maven.Createjob -->
       <class name="Maven.Dashboard">
         <methods>
-          <include name="profilelinkicon"/>
-          <include name="NotYetAllocatedCount"/>
-          <include name="Profilelinktext"/>
-          <include name="Settingstext"/>
-          <include name="Jobstoreview"/>
-          <include name="afterMethod"/>
-          <include name="NOtificationicon"/>
-          <include name="RunningLateCount"/>
           <include name="OnTimeCount"/>
           <include name="beforeMethod"/>
-          <include name="jobaschedulelink"/>
-          <include name="Profilelinkname"/>
-          <include name="WaitingToStartCount"/>
-          <include name="jobstoreviewlink"/>
-          <include name="Drivermanagementlink"/>
+          <include name="afterMethod"/>
         </methods>
       </class> <!-- Maven.Dashboard -->
-      <class name="Maven.Login">
-        <methods>
-          <include name="testwithinvalidemail"/>
-          <include name="testwithinvaliddetails"/>
-          <include name="testwithvalidpassword"/>
-          <include name="afterMethod"/>
-          <include name="testwithinvalidpassword"/>
-          <include name="beforeMethod"/>
-          <include name="testwithvaliddetails"/>
-          <include name="testwithvalidemail"/>
-        </methods>
-      </class> <!-- Maven.Login -->
       <class name="Maven.Forgotpassword">
         <methods>
           <include name="beforeMethod"/>
-          <include name="testwithdifferentpassword"/>
-          <include name="testwithblankemail"/>
           <include name="testwithvalidemail"/>
-          <include name="testredirectforgot"/>
-          <include name="testwithblankpassword"/>
-          <include name="testwithunmatchedformatpassword"/>
           <include name="afterMethod"/>
-          <include name="testwithinvalidemail"/>
           <include name="testwithvalidpassword"/>
         </methods>
       </class> <!-- Maven.Forgotpassword -->
-      <class name="Maven.Rateupdate">
-        <methods>
-          <include name="blank11LTDrate"/>
-          <include name="blankLTDrate"/>
-          <include name="blank1LTDrate"/>
-          <include name="beforeMethod"/>
-          <include name="afterMethod"/>
-        </methods>
-      </class> <!-- Maven.Rateupdate -->
     </classes>
   </test> <!-- tests(failed) -->
 </suite> <!-- Failed suite [test-suite] -->
